@@ -12,9 +12,9 @@ logging.set_verbosity(logging.ERROR)
 
 # Set filepaths to coco datasets
 # Link to full dataset: https://universe.roboflow.com/queendev9516-gmail-com/soccer-ball-oa830/dataset/1
-training_dataset_path = 'coco/train'
-valid_dataset_path = 'coco/valid'
-test_dataset_path = 'coco/test'
+training_dataset_path = 'coco_dataset/train'
+valid_dataset_path = 'coco_dataset/valid'
+test_dataset_path = 'coco_dataset/test'
 
 # Create Dataset objects from filepath and set a cache directory
 training_data = object_detector.Dataset.from_coco_folder(training_dataset_path, cache_dir="od_data/train")
@@ -28,7 +28,7 @@ print("validation_data size: ", validation_data.size)
 # Set spec to a preset model (MobilenetV2)
 spec = object_detector.SupportedModels.MOBILENET_V2
 # Set hyperparameters
-hparams = object_detector.HParams(export_dir='retrained_model2')
+hparams = object_detector.HParams(export_dir='retrained_model_3')
 # Set options for model
 options = object_detector.ObjectDetectorOptions(supported_model=spec,hparams=hparams)
 
