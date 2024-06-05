@@ -1,0 +1,4 @@
+mediapipe_model_maker
+mediapipe
+opencv-python
+opencv-contrib-python
